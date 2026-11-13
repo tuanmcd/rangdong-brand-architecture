@@ -56,7 +56,7 @@
           "rallismart",
           "home"
         ],
-        "note": "RaIO là lõi AIoT; RalliSmart là ứng dụng người dùng chạy trên RaIO."
+        "note": "RaIO là lõi AIoT; RalliSmart là app cho người dùng thiết bị thông minh của Rạng Đông."
       }
     ]
   },
@@ -185,7 +185,7 @@
       "id": "rallismart",
       "type": "messagebus",
       "label": "RalliSmart",
-      "sublabel": "Ứng dụng & hệ sinh thái thiết bị",
+      "sublabel": "App cho người dùng thiết bị thông minh của Rạng Đông",
       "tag": "Tầng 4 · Ứng dụng",
       "pos": [
         782,
@@ -309,7 +309,7 @@
       "items": [
         "Rạng Đông: công ty công nghệ điện, điện tử",
         "RaIO: AIoT mở, \"powered by\" cho mọi lĩnh vực",
-        "RalliSmart: app người dùng vận hành trên RaIO",
+        "RalliSmart: app cho người dùng thiết bị thông minh của Rạng Đông, chạy trên RaIO",
         "Hero là đề xuất, cần xác nhận với từng khối"
       ]
     }
