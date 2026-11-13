@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Kiến trúc thương hiệu Rạng Đông",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1250,
+      590
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "cloud": {
+          "label": "Thương hiệu mẹ"
+        },
+        "backend": {
+          "label": "Lĩnh vực thiên về tiêu dùng"
+        },
+        "frontend": {
+          "label": "Lĩnh vực thiên về dự án"
+        },
+        "messagebus": {
+          "label": "Nền tảng công nghệ"
+        }
+      }
+    },
+    "views": [
+      {
+        "id": "consumer",
+        "label": "Nhánh tiêu dùng",
+        "focus": [
+          "parent",
+          "lighting",
+          "home",
+          "energy"
+        ],
+        "note": "Ba lĩnh vực hướng tới hộ gia đình và người dùng cuối."
+      },
+      {
+        "id": "project",
+        "label": "Nhánh dự án",
+        "focus": [
+          "parent",
+          "building",
+          "city",
+          "farm"
+        ],
+        "note": "Ba lĩnh vực hướng tới chủ đầu tư, đô thị và nông nghiệp."
+      },
+      {
+        "id": "platform",
+        "label": "Nền tảng dùng chung",
+        "focus": [
+          "raio",
+          "rallismart",
+          "home"
+        ],
+        "note": "RaIO là lõi AIoT; RalliSmart là ứng dụng người dùng chạy trên RaIO."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "parent",
+      "type": "cloud",
+      "label": "Rạng Đông",
+      "sublabel": "Thông minh – Xanh, Đồng hành – Chất sống Việt",
+      "tag": "Tầng 1 · Thương hiệu mẹ",
+      "pos": [
+        455,
+        50
+      ],
+      "size": [
+        340,
+        80
+      ]
+    },
+    {
+      "id": "lighting",
+      "type": "backend",
+      "label": "Rạng Đông Lighting",
+      "sublabel": "Chiếu sáng dân dụng, kiến trúc",
+      "tag": "Hero: Đèn LED bảo vệ thị lực",
+      "pos": [
+        40,
+        220
+      ],
+      "size": [
+        175,
+        96
+      ]
+    },
+    {
+      "id": "home",
+      "type": "backend",
+      "label": "Rạng Đông Home",
+      "sublabel": "Nhà thông minh, gia dụng",
+      "tag": "Hero: Bộ Smart Home khởi đầu",
+      "pos": [
+        230,
+        220
+      ],
+      "size": [
+        175,
+        96
+      ]
+    },
+    {
+      "id": "energy",
+      "type": "backend",
+      "label": "Rạng Đông Energy",
+      "sublabel": "Điện mặt trời, lưu trữ",
+      "tag": "Hero: ĐMT áp mái + lưu trữ",
+      "pos": [
+        420,
+        220
+      ],
+      "size": [
+        175,
+        96
+      ]
+    },
+    {
+      "id": "building",
+      "type": "frontend",
+      "label": "Rạng Đông Building",
+      "sublabel": "Tòa nhà, trường học, bệnh viện",
+      "tag": "Hero: Chiếu sáng lớp học chuẩn",
+      "pos": [
+        655,
+        220
+      ],
+      "size": [
+        175,
+        96
+      ]
+    },
+    {
+      "id": "city",
+      "type": "frontend",
+      "label": "Rạng Đông City",
+      "sublabel": "Đô thị, hạ tầng công cộng",
+      "tag": "Hero: Đèn đường LED thông minh",
+      "pos": [
+        845,
+        220
+      ],
+      "size": [
+        175,
+        96
+      ]
+    },
+    {
+      "id": "farm",
+      "type": "frontend",
+      "label": "Rạng Đông Farm",
+      "sublabel": "Nông nghiệp công nghệ cao",
+      "tag": "Hero: Đèn LED nông nghiệp",
+      "pos": [
+        1035,
+        220
+      ],
+      "size": [
+        175,
+        96
+      ]
+    },
+    {
+      "id": "raio",
+      "type": "messagebus",
+      "label": "RaIO",
+      "sublabel": "Nền tảng AIoT mở · powered by",
+      "tag": "Tầng 4 · Nền tảng",
+      "pos": [
+        167,
+        440
+      ],
+      "size": [
+        300,
+        80
+      ]
+    },
+    {
+      "id": "rallismart",
+      "type": "messagebus",
+      "label": "RalliSmart",
+      "sublabel": "Ứng dụng & hệ sinh thái thiết bị",
+      "tag": "Tầng 4 · Ứng dụng",
+      "pos": [
+        782,
+        440
+      ],
+      "size": [
+        300,
+        80
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Tầng 2–3 · Thiên về người tiêu dùng",
+      "wraps": [
+        "lighting",
+        "home",
+        "energy"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Tầng 2–3 · Thiên về dự án",
+      "wraps": [
+        "building",
+        "city",
+        "farm"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "p-lighting",
+      "from": "parent",
+      "to": "lighting",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis"
+    },
+    {
+      "id": "p-home",
+      "from": "parent",
+      "to": "home",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis"
+    },
+    {
+      "id": "p-energy",
+      "from": "parent",
+      "to": "energy",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis"
+    },
+    {
+      "id": "p-building",
+      "from": "parent",
+      "to": "building",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis"
+    },
+    {
+      "id": "p-city",
+      "from": "parent",
+      "to": "city",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis"
+    },
+    {
+      "id": "p-farm",
+      "from": "parent",
+      "to": "farm",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis"
+    },
+    {
+      "id": "rs-raio",
+      "from": "rallismart",
+      "to": "raio",
+      "label": "vận hành trên",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "rs-home",
+      "from": "rallismart",
+      "to": "home",
+      "label": "app điều khiển",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Tiêu dùng · Hero dự kiến",
+      "items": [
+        "Lighting — đèn LED bảo vệ thị lực, chống chói",
+        "Home — bộ Smart Home khởi đầu trên app RalliSmart",
+        "Energy — điện mặt trời áp mái + lưu trữ"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Dự án · Hero dự kiến",
+      "items": [
+        "Building — chiếu sáng lớp học chuẩn",
+        "City — đèn đường LED thông minh, chỉnh từ xa",
+        "Farm — đèn LED hoa cúc, thanh long, đánh bắt cá"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Thương hiệu mẹ & nền tảng",
+      "items": [
+        "Rạng Đông: công ty công nghệ điện, điện tử",
+        "RaIO: AIoT mở, \"powered by\" cho mọi lĩnh vực",
+        "RalliSmart: app người dùng vận hành trên RaIO",
+        "Hero là đề xuất, cần xác nhận với từng khối"
+      ]
+    }
+  ]
+}
