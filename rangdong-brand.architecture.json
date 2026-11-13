@@ -54,7 +54,9 @@
         "focus": [
           "raio",
           "rallismart",
-          "home"
+          "lighting",
+          "home",
+          "energy"
         ],
         "note": "RaIO là lõi AIoT; RalliSmart là app cho người dùng thiết bị thông minh của Rạng Đông."
       }
@@ -173,7 +175,7 @@
       "sublabel": "Nền tảng AIoT mở · powered by",
       "tag": "Tầng 4 · Nền tảng",
       "pos": [
-        167,
+        782,
         440
       ],
       "size": [
@@ -188,7 +190,7 @@
       "sublabel": "App cho người dùng thiết bị thông minh của Rạng Đông",
       "tag": "Tầng 4 · Ứng dụng",
       "pos": [
-        782,
+        167.5,
         440
       ],
       "size": [
@@ -267,12 +269,12 @@
       "variant": "emphasis"
     },
     {
-      "id": "rs-raio",
+      "id": "rs-lighting",
       "from": "rallismart",
-      "to": "raio",
-      "label": "vận hành trên",
-      "fromSide": "left",
-      "toSide": "right"
+      "to": "lighting",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom"
     },
     {
       "id": "rs-home",
@@ -281,7 +283,28 @@
       "label": "app điều khiển",
       "variant": "dashed",
       "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [
+        400,
+        410
+      ],
+      "route": "straight"
+    },
+    {
+      "id": "rs-energy",
+      "from": "rallismart",
+      "to": "energy",
+      "variant": "dashed",
+      "fromSide": "top",
       "toSide": "bottom"
+    },
+    {
+      "id": "rs-raio",
+      "from": "rallismart",
+      "to": "raio",
+      "label": "vận hành trên",
+      "fromSide": "right",
+      "toSide": "left"
     }
   ],
   "cards": [
